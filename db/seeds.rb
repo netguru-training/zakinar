@@ -17,10 +17,12 @@ UserCategory.create! user_id: 1 , category_id: 1
 UserCategory.create! user_id: 1 , category_id: 3
 UserCategory.create! user_id: 1 , category_id: 5
 
-
-
-
-
+Note.create! title: Faker::Name.title , description: Faker::Lorem.sentence , user_id: 1 , category_id: 1
+Note.create! title: Faker::Name.title , description: Faker::Lorem.sentence , user_id: 1 , category_id: 2
+Note.create! title: Faker::Name.title , description: Faker::Lorem.sentence , user_id: 1 , category_id: 3
+Note.create! title: Faker::Name.title , description: Faker::Lorem.sentence , user_id: 2 , category_id: 1
+Note.create! title: Faker::Name.title , description: Faker::Lorem.sentence , user_id: 2 , category_id: 4
+Note.create! title: Faker::Name.title , description: Faker::Lorem.sentence , user_id: 2 , category_id: 5
 
 
 
