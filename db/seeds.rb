@@ -13,6 +13,10 @@ puts 'CREATED ADMIN USER: ' << user.email
   Category.create!(name: cat_name)
 end
 
+UserCategory.create! user_id: 1 , category_id: 1
+UserCategory.create! user_id: 1 , category_id: 3
+UserCategory.create! user_id: 1 , category_id: 5
+
 
 
 
