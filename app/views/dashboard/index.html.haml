@@ -1,4 +1,12 @@
 %h1 Dashboard
 %p It will be our dashboard page
-- my_categories.each do |cat|
-- other_categories.each do |cat|
+=render 'all_categories'
+
+- if current_user && !current_user.nil?
+  %p My Categories
+  - my_categories.each do |cat|
+    =cat.name
+  %br
+  %p Other categories
+  - other_categories.each do |cat|
+    =cat.name
