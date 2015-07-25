@@ -1,4 +1,6 @@
 class Note < ActiveRecord::Base
-  has_many :categories
+  association :note_categories
+  has_many :note_categories
+  has_many :categories, through: :note_categories
   belongs_to :user
 end

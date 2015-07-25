@@ -1,9 +1,13 @@
 class Category < ActiveRecord::Base
   has_many :user_categories
   has_many :users , through: :user_categories
+<<<<<<< HEAD
 
   scope :other_categories, ->(category_ids) { where(id: category_ids) }
 =======
   has_many :notes , through: :note_categories
 >>>>>>> Note and Category, many to many
+=======
+  has_many :notes , through: :note_categories
+>>>>>>> References to NoteCategory
 end
