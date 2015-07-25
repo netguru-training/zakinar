@@ -1,4 +1,4 @@
 class Note < ActiveRecord::Base
-  has_many :notes
+  has_many :categories
   belongs_to :user
 end
