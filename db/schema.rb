@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150725133146) do
+ActiveRecord::Schema.define(version: 20150725150854) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,16 @@ ActiveRecord::Schema.define(version: 20150725133146) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "note_categories", force: :cascade do |t|
+    t.integer  "note_id"
+    t.integer  "category_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "note_categories", ["category_id"], name: "index_note_categories_on_category_id", using: :btree
+  add_index "note_categories", ["note_id"], name: "index_note_categories_on_note_id", using: :btree
 
   create_table "notes", force: :cascade do |t|
     t.string   "title"
@@ -62,6 +72,8 @@ ActiveRecord::Schema.define(version: 20150725133146) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "note_categories", "categories"
+  add_foreign_key "note_categories", "notes"
   add_foreign_key "user_categories", "categories"
   add_foreign_key "user_categories", "users"
 end
