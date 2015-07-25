@@ -1,8 +1,7 @@
 %h1 Dashboard
 %p It will be our dashboard page
-=render 'all_categories'
 
-- if current_user && !current_user.nil?
+- if current_user && user_signed_in?
   %p My Categories
   - my_categories.each do |cat|
     =cat.name
@@ -10,3 +9,5 @@
   %p Other categories
   - other_categories.each do |cat|
     =cat.name
+- else
+  =render 'all_categories'
