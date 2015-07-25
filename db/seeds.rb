@@ -9,10 +9,11 @@
 user = CreateAdminService.new.call
 puts 'CREATED ADMIN USER: ' << user.email
 
-
-%w(Sport Music Movie TV IT Social).each do |mmmm|
-  Category.create!(name: mmmm)
+%w(Sport Music Movie TV IT Social).each do |cat_name|
+  Category.create!(name: cat_name)
 end
+
+
 
 
 
