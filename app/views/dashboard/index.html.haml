@@ -3,11 +3,17 @@
   .container
     - if current_user && user_signed_in?
       %p My Categories
-      - my_categories.each do |cat|
-        =link_to cat.name
+      - my_categories.each_slice(4) do |row|
+        .row
+          - row.each do |category|
+            .col-md-3
+              =link_to category.name
       %br
       %p Other categories
-      - other_categories.each do |cat|
-        =link_to cat.name
+      - other_categories.each_slice(4) do |row|
+        .row
+          - row.each do |category|
+            .col-md-3
+              =link_to category.name
     - else
       =render 'all_categories'
