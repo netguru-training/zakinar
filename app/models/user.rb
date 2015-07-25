@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   after_initialize :set_default_role, :if => :new_record?
 
   has_many :notes
+  has_many :categories, through: :user_categories
 
   def set_default_role
     self.role ||= :user
