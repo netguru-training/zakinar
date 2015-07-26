@@ -1,7 +1,7 @@
 Zakinar App
 ================
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://blooming-temple-9070.herokuapp.com/)
 
 ### :hash: App description
 -------------
