@@ -101,7 +101,9 @@ border: medium none !important;
 .select2-container{
   width:200px !important;
 }
-
+.s2id_autogen2{
+  width: 103% !important;
+}
 .note-container {
   text-align: center;
   border-radius: 2.5em;
@@ -110,7 +112,7 @@ border: medium none !important;
   text-align: center;
   border: 1px solid gray;
   background: #E6E6E6;
-  width: 750px;
+  max-width: 750px;
   height: 450px;
   p {
     padding-top: 40px;
@@ -123,7 +125,7 @@ border: medium none !important;
 }
 
 .my_profile {
-  padding-left: 100px;
+
   .glyphicon {
     font-size: 100px;
     text-align: center;
@@ -136,10 +138,25 @@ border: medium none !important;
   }
 }
 
+.show_data{
+text-align: center;
+overflow: hidden;
+background: none repeat scroll 0% 0% #E0E0E0;
+border: 1px solid #EEE;
+margin: 5px;
+padding: 60px;
+}
+
 .authform {
   text-align: center;
   textarea {
+    border-radius: .5em;
     width: 250px;
     height: 50px;
   }
+}
+
+img {
+  border-radius: .5em;
+  border:  1px solid gray;
 }
