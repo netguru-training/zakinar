@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'decent_exposure', '~> 2.3.2'
 gem 'draper'
+gem 'figaro'
 gem 'carrierwave'
 group :development, :test do
   gem 'byebug'
