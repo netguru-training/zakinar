@@ -3,6 +3,10 @@
     .row
       - row.each do |category|
         .col-md-3
-          .placeholder
-            = link_to category.name, category
-            = image_tag category.avatar.url
+          .category_container
+            .name
+              = link_to category.name, category
+            - if category.avatar.present?
+              =image_tag category.avatar.url
+            - else
+              .placeholder
