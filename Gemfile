@@ -12,6 +12,7 @@ gem 'draper'
 gem 'figaro'
 #gem 'fog', '~> 1.3.1'
 gem 'carrierwave'
+gem 'fog'
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
