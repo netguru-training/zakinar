@@ -2,7 +2,7 @@
   - @categories.each_slice(4) do |row|
     .row
       - row.each do |category|
-        .col-lg-3.col-md-4.col-sm-6.col-xs-12.center_div
+        .col-lg-3.col-md-4.col-sm-6.col-xs-12.col-xs-offset-3
           .category_container
             .name
               = link_to category.name, category
