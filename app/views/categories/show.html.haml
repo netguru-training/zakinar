@@ -6,6 +6,7 @@
           .col-md-3
             .category_container
               .name
-                = link_to note.title, note
-                %br
-                = note.description
+                %h2= link_to note.title, note
+                %h3= note.description
+                %h4 Utworzono dnia:
+                %h4= note.created_at.strftime("%d-%m-%Y")
