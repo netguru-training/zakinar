@@ -133,8 +133,10 @@ border: medium none !important;
 }
 
 .authform {
+
   text-align: center;
   textarea {
+    border-radius: .5em;
     width: 250px;
     height: 50px;
   }
