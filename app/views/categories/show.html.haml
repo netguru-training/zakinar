@@ -4,7 +4,8 @@
       .row
         - row.each do |note|
           .col-md-3
-            .placeholder
-              = link_to note.title, note
-              %br
-              = note.description
+            .category_container
+              .name
+                = link_to note.title, note
+                %br
+                = note.description
