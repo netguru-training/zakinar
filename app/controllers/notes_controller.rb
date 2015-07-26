@@ -7,7 +7,6 @@ class NotesController < ApplicationController
   end
 
   def create
-    binding.pry
     if note.save
       redirect_to note, notice: "Note was successfully created!"
     else
@@ -34,6 +33,6 @@ class NotesController < ApplicationController
   private
 
   def note_params
-    params.require(:note).permit(:title, :description, :user_id, :category_id).merge({ user_id: current_user.id })
+    params.require(:note).permit(:title, :description, :user_id, :category_ids).merge({ user_id: current_user.id })
   end
 end
