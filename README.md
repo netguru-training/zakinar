@@ -5,7 +5,9 @@ Zakinar App
 
 ### :hash: App description
 -------------
-... desc here ...
+
+Application is a smaller version of Pintereset.com. 
+User can add notes to category and add category to favorites. 
 
 
 ### :closed_lock_with_key: Technology stack
