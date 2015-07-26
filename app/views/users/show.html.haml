@@ -22,7 +22,7 @@
     - @user.notes.each_slice(4) do |row|
       .row
         - row.each do |note|
-          .col-md-3
+          .col-lg-3.col-md-3.col-sm-6.col-xs-12
             .category_container
               .name
                 %h2= link_to note.title, note
