@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   enum role: [:user, :vip, :admin]
   after_initialize :set_default_role, :if => :new_record?
 
+  has_many :comments
   has_many :notes
   has_many :user_categories
   has_many :categories, through: :user_categories

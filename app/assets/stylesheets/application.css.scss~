@@ -48,10 +48,6 @@ background: linear-gradient(to bottom, #D5D0D0 0%, #908E8E 100%);
 border: 1px solid rgba(158, 158, 158, 0.61) !important;
 }
 
-input:focus{
-border-color: #66AFE9 !important;
-outline: 0px none !important;
-}
 input{
 box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.4) inset !important;
 border-radius: 5px !important;
