@@ -14,6 +14,7 @@ gem 'mini_magick'
 #gem 'fog', '~> 1.3.1'
 gem 'carrierwave'
 gem 'fog'
+gem 'gon'
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
