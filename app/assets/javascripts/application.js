@@ -14,3 +14,11 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require_tree .
+//= require select2
+
+
+
+$(document).ready(function() {
+  $(".js-example-basic-multiple").select2({
+  });
+});

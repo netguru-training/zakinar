@@ -60,6 +60,7 @@ box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.0) inset !important;
 border-radius: 5px !important;
 border: medium none !important;
 }
+
 .category_container {
   border: 1px solid gray;
   background: red;
@@ -76,5 +77,9 @@ border: medium none !important;
     margin: 20px;
   }
 }
-.placeholder {
+
+
+
+.select2-container{
+  width:200px !important;
 }

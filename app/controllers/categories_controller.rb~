@@ -1,6 +1,8 @@
 class CategoriesController < ApplicationController
   expose(:category)
+<<<<<<< HEAD
   expose(:notes) { category.notes }
+=======
   #expose(:notes) { category.notes }
   respond_to :json, :html
 
@@ -15,5 +17,5 @@ class CategoriesController < ApplicationController
   end
 
 
-
+>>>>>>> [WiP] implementing select2 to app
 end

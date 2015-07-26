@@ -1,0 +1,3 @@
+%div{:class => "js-example-basic-multiple"}
+  - @categories.each do |x|
+    %option= link_to x.name, '/categories/'+x.id.to_s

@@ -10,9 +10,11 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require select2
  *= require_tree .
  *= require_self
  */
+
 
 a, button, input{
 transition: all 0.2s ease-in-out 0s;
@@ -57,4 +59,27 @@ border: medium none !important;
 box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.0) inset !important;
 border-radius: 5px !important;
 border: medium none !important;
+}
+
+.category_container {
+  border: 1px solid gray;
+  background: red;
+  margin: 5px;
+  width: 100px;
+  height: 120px;
+  .name {
+    text-align: center;
+  }
+  .placeholder {
+    background-color: gray;
+    width: 60px;
+    height: 60px;
+    margin: 20px;
+  }
+}
+.placeholder {
+
+
+.select2-container{
+  width:200px !important;
 }
