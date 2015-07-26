@@ -109,3 +109,6 @@ pickle-email-*.html
         clean = git lfs clean %f
         smudge = git lfs smudge %f
         required = true
+
+# Ignore application configuration
+/config/application.yml
