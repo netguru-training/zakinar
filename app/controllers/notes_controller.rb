@@ -1,14 +1,13 @@
 class NotesController < ApplicationController
-  expose(:categories)
-  expose(:category)
+  expose(:categories) { Category.all }
   expose(:notes)
-  expose(:note)
+  expose(:note, attributes: :note_params)
 
   def new
   end
 
   def create
-    note = current_user.notes.build(note_params)
+    binding.pry
     if note.save
       redirect_to note, notice: "Note was successfully created!"
     else
@@ -35,6 +34,6 @@ class NotesController < ApplicationController
   private
 
   def note_params
-    params.require(:note).permit(:title, :description, :user_id, :category_id)
+    params.require(:note).permit(:title, :description, :user_id, :category_id).merge({ user_id: current_user.id })
   end
 end
