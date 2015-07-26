@@ -5,7 +5,9 @@ class ApplicationController < ActionController::Base
 
   private
 
-	def user_params
-		params.require(:user).permit(:first_name, :last_name)
-	end
+  before_action :configure_permitted_parameters, if: :devise_controller?
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:email, :first_name, :last_name, :password, :password_confirmation) }
+  end
 end
