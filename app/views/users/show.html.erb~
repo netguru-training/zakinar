@@ -1,0 +1,4 @@
+<h3>User</h3>
+<p>Firstame: <%= @user.first_name if @user.firstname %></p>
+<p>Lastame: <%= @user.last_name if @user.lastname %></p>
+<p>Email: <%= @user.email if @user.email %></p>

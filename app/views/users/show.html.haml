@@ -1,0 +1,26 @@
+- if notice
+  %p#notice= notice
+  %p#error= flash[:error]
+
+.row
+  .col-sm-4.col-xs-12
+    .show_data
+      .title= "#{@user.first_name} #{@user.last_name}"
+
+  .col-sm-8.col-xs-12
+    .show_data
+      %p
+        %b e-mail:
+        = @user.email
+      %p
+        %b last logged in:
+        = distance_of_time_in_words(@user.current_sign_in_at, Time.now) + " ago"
+
+
+.row
+  .col-sm-4.col-xs-12
+
+  .col-sm-8.col-xs-12
+
+
+
