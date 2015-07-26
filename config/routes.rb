@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :categories
+  resources :categories do
+    get 'assign_to_user' , on: :member
+    get 'unassign_from_user', on: :member
+  end
   resources :notes
 
   root to: 'dashboard#index'

@@ -11,7 +11,8 @@
                 .name
                   = link_to category.name, category
                 - if category.avatar.present?
-                  =image_tag category.avatar.url(:thumb)
+                  = image_tag category.avatar.url(:thumb)
+                  = link_to 'Unobserve', unassign_from_user_category_path(category), class: 'btn btn-md btn-info'
                 - else
                   .placeholder
       %br
@@ -26,7 +27,8 @@
                     = link_to category.name, category
                   - if category.avatar.present?
                     = image_tag category.avatar.url(:thumb)
+                    = link_to 'Observe', assign_to_user_category_path(category), class: 'btn btn-md btn-info'
                   - else
                     .placeholder
     - else
-      =render 'all_categories'
+      = render 'all_categories'
