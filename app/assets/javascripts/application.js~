@@ -14,16 +14,18 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require_tree .
-<<<<<<< HEAD
-=======
 //= require select2
 
 
-
 $(document).ready(function() {
-  $(".js-example-basic-multiple").select2({
-  });
+  var data = gon.categories;
+  console.info('ad');
+  debugger;
+  $("#note_category_ids").select2({
+formatSelection: function (item) { return item.name; },
+  formatResult: function (item) { return item.name; },
+ matcher: function(term, text, option) {
+        return option.name.toUpperCase().indexOf(term.toUpperCase())>=0;
+    }
+  })
 });
-
-
->>>>>>> [WiP] implementing select2 to app

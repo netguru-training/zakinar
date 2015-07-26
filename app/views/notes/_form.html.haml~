@@ -4,9 +4,8 @@
     = f.text_area :title, input_html: { class: 'form-control' }
   .form-group
     = f.label :description
-    = f.text_area :description, input_html: { class: 'form-control' }
   .form-group
-    Categories
+    = f.text_area :description, input_html: { class: 'form-control' }
     %input.js-example-tags{ name: "category_ids"}
   .form-group
     = f.button :submit, class: "btn btn-primary"

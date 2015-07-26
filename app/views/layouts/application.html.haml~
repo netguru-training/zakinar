@@ -9,7 +9,7 @@
     = csrf_meta_tags
   %body
     %header
-      = include_gon
+      = include_go
       = render 'layouts/navigation'
     %main{:role => "main"}
       = render 'layouts/messages'

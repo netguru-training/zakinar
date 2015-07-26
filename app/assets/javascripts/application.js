@@ -17,8 +17,16 @@
 //= require select2
 
 
-
 $(document).ready(function() {
-  $(".js-example-basic-multiple").select2({
-  });
+  var data = gon.categories;
+  debugger;
+  $(".js-example-tags").select2({
+    multiple: true,
+    data: data,
+formatSelection: function (item) { return item.name; },
+  formatResult: function (item) { return item.name; },
+ matcher: function(term, text, option) {
+        return option.name.toUpperCase().indexOf(term.toUpperCase())>=0;
+    }
+  })
 });
