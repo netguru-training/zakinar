@@ -11,7 +11,7 @@
                 .name
                   = link_to category.name, category
                 - if category.avatar.present?
-                  =image_tag ""
+                  =image_tag category.avatar.url(:thumb)
                 - else
                   .placeholder
       %br
@@ -24,7 +24,7 @@
                 .name
                   = link_to category.name, category
                 - if category.avatar.present?
-                  =image_tag
+                  =image_tag category.avatar.url(:thumb)
                 - else
                   .placeholder
     - else
