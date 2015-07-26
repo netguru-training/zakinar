@@ -17,19 +17,14 @@ UserCategory.create! user_id: 1 , category_id: 1
 UserCategory.create! user_id: 1 , category_id: 3
 UserCategory.create! user_id: 1 , category_id: 5
 
+32.times do |note|
+  Note.create! title: Faker::Name.title , description: Faker::Lorem.sentence , user_id: rand(1..3) , category_id: rand(1..8)
+end
 
-Note.create! title: Faker::Name.title , description: Faker::Lorem.sentence , user_id: 1 , category_id: 1
-Note.create! title: Faker::Name.title , description: Faker::Lorem.sentence , user_id: 1 , category_id: 2
-Note.create! title: Faker::Name.title , description: Faker::Lorem.sentence , user_id: 1 , category_id: 3
-Note.create! title: Faker::Name.title , description: Faker::Lorem.sentence , user_id: 2 , category_id: 1
-Note.create! title: Faker::Name.title , description: Faker::Lorem.sentence , user_id: 2 , category_id: 4
-Note.create! title: Faker::Name.title , description: Faker::Lorem.sentence , user_id: 2 , category_id: 5
+32.times do |notecategory|
+  NoteCategory.create! note_id: rand(1..32) , category_id: rand(1..8)
+end
 
-NoteCategory.create! note_id: 1 , category_id: 1
-NoteCategory.create! note_id: 2 , category_id: 2
-NoteCategory.create! note_id: 3 , category_id: 3
-NoteCategory.create! note_id: 4 , category_id: 4
-NoteCategory.create! note_id: 5 , category_id: 5
-NoteCategory.create! note_id: 6 , category_id: 6
+
 
 
