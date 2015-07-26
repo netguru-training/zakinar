@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  #get 'categories/:id', to: 'categories#show', as: :category
-  resources :categories, only: :show
+
+  resources :categories
+  resources :notes
+
   root to: 'dashboard#index'
   devise_for :users
   resources :users
