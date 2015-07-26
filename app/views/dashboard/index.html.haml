@@ -7,13 +7,25 @@
         .row
           - row.each do |category|
             .col-md-3
-              =link_to category.name
+              .category_container
+                .name
+                  = link_to category.name, category
+                - if category.avatar.present?
+                  =image_tag ""
+                - else
+                  .placeholder
       %br
       %p Other categories
       - other_categories.each_slice(4) do |row|
         .row
           - row.each do |category|
             .col-md-3
-              =link_to category.name, category_path(category)
+              .category_container
+                .name
+                  = link_to category.name, category
+                - if category.avatar.present?
+                  =image_tag ""
+                - else
+                  .placeholder
     - else
       =render 'all_categories'

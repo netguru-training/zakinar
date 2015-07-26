@@ -60,3 +60,22 @@ box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.0) inset !important;
 border-radius: 5px !important;
 border: medium none !important;
 }
+.category_container {
+  border: 1px solid gray;
+  background: red;
+  margin: 5px;
+  width: 100px;
+  height: 120px;
+  .name {
+    text-align: center;
+  }
+  .placeholder {
+    background-image: url(tesla.jpg);
+    width: 60px;
+    height: 60px;
+    margin: 20px;
+  }
+}
+.placeholder {
+
+}

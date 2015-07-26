@@ -1,3 +1,10 @@
-- @notes.each do |note|
-  =note.title
-  =note.description
+.container
+  .row
+    - notes.each_slice(4) do |row|
+      .row
+        - row.each do |note|
+          .col-md-3
+            .placeholder
+              = link_to note.title, note
+              %br
+              = note.description
