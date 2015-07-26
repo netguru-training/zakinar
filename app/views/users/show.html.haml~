@@ -5,7 +5,7 @@
 .row
   .col-sm-4.col-xs-12
     .show_data
-      .title= "#{@user.firstname} #{@user.lastname}"
+      .title= "#{@user.first_name} #{@user.last_name}"
 
   .col-sm-8.col-xs-12
     .show_data
@@ -19,8 +19,11 @@
 
 .row
   .col-sm-4.col-xs-12
-
-  .col-sm-8.col-xs-12
+    - @user.notes.each do |note|
+      .title= note.title
+      .content= note.description
+      .auhor= link_to "#{note.user.first_name} #{note.user.last_name}", "/users/#{note.user_id}"
+      .publish_date= review.created_at.strftime("%d-%m-%Y")
 
 
 
