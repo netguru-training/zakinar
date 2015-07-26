@@ -1,0 +1,8 @@
+.container
+  .note-container
+    %p Title
+    %h2= note.title
+    %p Description
+    %h3= note.description
+    %p Created at:
+    %h4= note.created_at.strftime("%d-%m-%Y")

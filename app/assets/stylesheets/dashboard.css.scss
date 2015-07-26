@@ -2,11 +2,12 @@
 @import "bootstrap";
 
 .body {
-  padding-left: 80px;
-  padding-right: 80px;
+  font-family: Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
   margin-left: center;
   margin-right: center;
   h1 {
+    font-weight: bold;
+    font-size: 50px;
     text-align: center;
   }
 }

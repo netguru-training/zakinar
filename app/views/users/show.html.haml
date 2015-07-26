@@ -9,21 +9,23 @@
 
   .col-sm-8.col-xs-12
     .show_data
-      %p
-        %b e-mail:
-        = @user.email
-      %p
-        %b last logged in:
-        = distance_of_time_in_words(@user.current_sign_in_at, Time.now) + " ago"
-
-
-.row
-  .col-sm-4.col-xs-12
-    - @user.notes.each do |note|
-      .title= note.title
-      .content= note.description
-      .auhor= link_to "#{note.user.first_name} #{note.user.last_name}", "/users/#{note.user_id}"
-      .publish_date= note.created_at.strftime("%d-%m-%Y")
-
-
-
+      .my_profile
+        .glyphicon.glyphicon-user
+          %p
+            %b e-mail:
+            = @user.email
+          %p
+            %b last logged in:
+            = distance_of_time_in_words(@user.current_sign_in_at, Time.now) + " ago"
+.container
+  .row
+    - @user.notes.each_slice(4) do |row|
+      .row
+        - row.each do |note|
+          .col-md-3
+            .category_container
+              .name
+                %h2= link_to note.title, note
+                %h3= note.description
+                %h4 Utworzono dnia:
+                %h4= note.created_at.strftime("%d-%m-%Y")

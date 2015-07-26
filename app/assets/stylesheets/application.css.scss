@@ -28,6 +28,7 @@ text-decoration: none !important;
 }
 
 body{
+  margin-top: 100px;
 background-color: #ECECEC !important;
 }
 
@@ -62,6 +63,7 @@ border: medium none !important;
 }
 
 .category_container {
+  border-radius: 1.5em;
   border: 1px solid gray;
   background: #E6E6E6;
   margin: 5px;
@@ -81,6 +83,8 @@ border: medium none !important;
   }
   .name {
     text-align: center;
+    font-size: 20px;
+    font-style: italic;
   }
   .placeholder {
     background-color: gray;
@@ -92,4 +96,38 @@ border: medium none !important;
 
 .select2-container{
   width:200px !important;
+}
+
+.note-container {
+  text-align: center;
+  border-radius: 2.5em;
+  margin-top: 60px;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid gray;
+  background: #E6E6E6;
+  width: 750px;
+  height: 450px;
+  p {
+    padding-top: 40px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  h2, h3 {
+    font-style: italic;
+  }
+}
+
+.my_profile {
+  padding-left: 100px;
+  .glyphicon {
+    font-size: 100px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 5px;
+  }
+  p {
+    font-size: 15px;
+    text-align: center;
+  }
 }
