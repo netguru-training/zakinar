@@ -1,7 +1,3 @@
-
-user = CreateAdminService.new.call
-puts 'CREATED ADMIN USER: ' << user.email
-
 User.create!(first_name: 'ad', last_name:'asd', password: 'dadassdadasdasdas', email: 'sdsddasdas@adadsdas.com')
 Category.create!(name: "SPORT" , remote_avatar_url: "http://www.doashait.com/images/image_6.jpg")
 Category.create!(name: "IT" , remote_avatar_url: "http://www.doashait.com/images/image_6.jpg")
