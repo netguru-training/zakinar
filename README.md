@@ -29,3 +29,4 @@ If You want add category to favaorites just click 'Observe' or you want to remov
   2. Copy the database config file (and edit if needed): cp config/database.yml.sample config/database.yml
   3. Run rake db:setup
   4. Final step to show how app works : rails s. 
+  5. Example data : email : sdsddasdas@adadsdas.com , password : dadassdadasdasdas 
