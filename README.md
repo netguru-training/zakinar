@@ -45,4 +45,12 @@ Rename the file `database.yml.sample`, which is located in the `config` folder.
 $ rake db:Setup
 ```
 
-###### Enjoy
+#### Step 4: Create local server to run application
+```
+$ rails s
+```
+
+#### Step 5: View the site
+Go to localhost:3000 in your browser.
+
+###### Enjoy!
